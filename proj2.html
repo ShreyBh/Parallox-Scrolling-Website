@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Home</title>
+    <link rel="stylesheet" href="normalise.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+<header>
+<a href="#" class="logo"> Logo </a>
+<ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Contact</a></li>
+
+</ul>
+</header>
+<section>
+    <img src="stars.png" id="stars" alt="">
+    <img src="moon.png" id="moon" alt="">
+    <img src="mountains_behind.png" id="mountains_behind" alt="">
+    <h2 id="text">Moon Blaze</h2>
+    <a href="#" id="btn">Explore</a>
+    <img src="mountains_front.png" id="mountains_front" alt="">
+</section>
+
+
+
+<div class="sec" id="sec">
+    <h2>Parallax Scrolling Property</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate. Enim autem repellat fugit distinctio voluptas corporis ullam esse, at ex placeat! Voluptatem officia odit doloribus quae id at consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt rerum, labore dolores sit maxime sequi totam hic itaque cum iste, id accusamus laboriosam quo, illo quaerat nam pariatur laudantium! Officia possimus ipsam in beatae iste totam earum sapiente incidunt necessitatibus minima ipsum nostrum, id fugiat quo, dolorum placeat. Blanditiis. <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate. Enim autem repellat fugit distinctio voluptas corporis ullam esse, at ex placeat! Voluptatem officia odit doloribus quae id at consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate. Enim autem repellat fugit distinctio voluptas corporis ullam esse, at ex placeat! Voluptatem officia odit doloribus quae id at consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate.<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate. Enim autem repellat fugit distinctio voluptas corporis ullam esse, at ex placeat! Voluptatem officia odit doloribus quae id at consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate.<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate. Enim autem repellat fugit distinctio voluptas corporis ullam esse, at ex placeat! Voluptatem officia odit doloribus quae id at consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quis voluptas nisi necessitatibus, id voluptatibus blanditiis itaque natus quam rem doloremque cum qui in consectetur inventore excepturi dolores esse cupiditate.</p>
+</div>
+
+
+
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function()
+    {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';   
+        text.style.marginTop = value * 0.8 + 'px';    
+        btn.style.marginTop = value * 1.5 + 'px';  
+        header.style.top = value * 0.5 + 'px'      
+    })
+    
+</script>  
+</body>
+</html>
